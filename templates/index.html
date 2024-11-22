@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script Runner</title>
+</head>
+
+<body>
+    <h1>Available Scripts</h1>
+
+    {% for folder, scripts in scripts.items() %}
+    <h2>{{ folder }}</h2> <!-- Heading for each folder -->
+    <ul>
+        {% for script in scripts %}
+        <li>
+            <a href="{{ url_for('run_script', script_path=folder + '/' + script[:-3]) }}">
+                {{ script }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endfor %}
+</body>
+
+</html>
