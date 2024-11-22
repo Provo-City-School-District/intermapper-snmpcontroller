@@ -70,7 +70,7 @@ import sys
 #while True:
 os.system('snmpset -v 3 -u group -l AuthPriv -a SHA -A password -x AES -X password IP OID i value')
 sleep(30)
-os.system('snmpset -v 3 -u group -l AuthPriv -a SHA -A password -x AES -X password ip ODI i ')
+os.system('snmpset -v 3 -u group -l AuthPriv -a SHA -A password -x AES -X password ip ODI i value')
 ```
 using pysnmp
 ```python
