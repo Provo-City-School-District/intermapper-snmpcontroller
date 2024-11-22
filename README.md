@@ -32,10 +32,10 @@ User=pi
 [Install]
 WantedBy=multi-user.target
 ```
-You can save this file in /etc/systemd/system/snmpapp.service and then run the following commands:
+You can save this file in /etc/systemd/system/snmp-app.service and then run the following commands:
 ```bash
-sudo systemctl snmpapp enable
-sudo systemctl snmpapp start
+sudo systemctl snmp-app enable
+sudo systemctl snmp-app start
 ```
 This will start the service and run it in the background. You can check the status/restart/stop the service with the following command:
 ```bash
